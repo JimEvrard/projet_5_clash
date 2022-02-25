@@ -1,0 +1,49 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top opacity-75 navbar-light">
+	<div class="container">
+		<img id="MDB-logo" src=".././images/raw.png" alt="MDB Logo" draggable="false" height="30"/>
+		<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto align-items-center">
+				{% if url == 'list_of_personages/:id' %}
+					<li class="nav-item">
+						<a class="nav-link mx-2" href="/create_personage">
+							<i class="fas fa-plus-circle pe-2"></i>Create Personage</a>
+					</li>
+					<li class="nav-item ms-3">
+						<a class="btn btn-black btn-rounded" href="/connect_user">disconnect</a>
+					</li>
+
+
+				{% elseif url == 'create_personage/:id' %}
+					<li class="nav-item">
+
+						<a class="nav-link mx-2" href="/list_of_personages/:id">
+							<i class="fas fa-bell pe-2"></i>List of Personages</a>
+					</li>
+				{% elseif url == 'update_personage/:id' %}
+					<li class="nav-item">
+
+						<a class="nav-link mx-2" href="/list_of_personages/:id">
+							<i class="fas fa-bell pe-2"></i>List of Personages</a>
+					</li>
+
+				{% else %}
+
+					<li class="nav-item ms-3">
+						<a class="btn btn-black btn-rounded" href="/create_user">Sign in</a>
+					</li>
+					<li class="nav-item ms-3">
+						<a class="btn btn-black btn-rounded" href="/connect_user">Connect</a>
+					</li>
+					<li class="nav-item ms-3">
+						<a class="btn btn-black btn-rounded" href="/before">Avant-Projet</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- Navbar -->

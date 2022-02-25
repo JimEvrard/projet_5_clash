@@ -1,0 +1,38 @@
+<div class="wrapper">
+	<a href="/update_personage/{{personage._id}}">
+
+		<div class="wrapper">
+			<div class="clash-card giant">
+				<div class="clash-card__image clash-card__image--giant">
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png" alt="giant"/>
+				</div>
+				<div class="clash-card__level clash-card__level--giant">LEVEL
+					{{personage.level}}</div>
+				<div class="clash-card__unit-name">{{personage.name}}</div>
+				<div class="clash-card__unit-description">
+					{{personage.description}}
+				</div>
+
+				<div class="clash-card__unit-stats clash-card__unit-stats--giant clearfix">
+					<div class="one-third">
+						<div class="stat">{{personage.attack}}
+						</div>
+						<div class="stat-value">Attack</div>
+					</div>
+
+					<div class="one-third">
+						<div class="stat">{{personage.defense}}</div>
+						<div class="stat-value">Defense</div>
+					</div>
+
+					<div class="one-third no-border">
+						<div class="stat">{{personage.life}}</div>
+						<div class="stat-value">Life</div>
+					</div>
+
+				</div>
+
+			</div>
+		</a>
+		<!-- end clash-card giant-->
+	</div>

@@ -1,0 +1,57 @@
+{% extends "./../index.html.twig" %}
+{% block main %}
+	<div class="container">
+		<div class="row">
+
+
+			<form class="col-md-6 mx-auto mt-5" method="post" action={% if action == '/update_personage' %} {{ action ~ '/' ~ personage._id}} {% else %} "/create_personage" {% endif %}>
+
+				<div>
+					<input type="text" class="form-control mb-3" id="create_name_personage" name="name" placeholder="Name" value="{{personage.name}}">
+				</div>
+				<div>
+					<input type="text" class="form-control mb-3" id="create_level_personage" readonly name="level" placeholder="Level" value="1">
+				</div>
+				<div>
+					<input type="text" class="form-control mb-3" id="create_description_personage" name="description" placeholder="Description" value="{{personage.description}}">
+				</div>
+
+				<div>
+					<input id="create_template_personage" type="radio" name="template_name" value="goblin">
+						<label for="goblin">Goblin</label>
+					</input>
+					<input id="create_template_personage" checked type="radio" name="template_name" value="wizard">
+						<label for="wizard">Wizard</label>
+					</input>
+					<input id="create_template_personage" type="radio" name="template_name" value="archer">
+						<label for="archer">Archer</label>
+					</input>
+					<input id="create_template_personage" type="radio" name="template_name" value="giant">
+						<label for="giant">Giant</label>
+					</input>
+				</div>
+				<br>
+				<p>Total points:
+					<span id="points-display"></span>
+				</p>
+				<div>
+					<label for="defense">Defense</label>
+					<input type="number" class="form-control mb-3" id="create_defense_personage" min="0" name="defense" placeholder="0" value="{{personage.defense}}">
+				</div>
+				<div>
+					<label for="attack">Attack</label>
+					<input type="number" class="form-control mb-3" id="create_attack_personage" min="0" name="attack" placeholder="0" value="{{personage.attack}}">
+				</div>
+				<div>
+					<label for="life">Life</label>
+					<input type="number" class="form-control mb-3" id="create_life_personage" min="0" name="life" placeholder="0" value="{{personage.life}}">
+				</div>
+
+				{% if action == '/update_personage' %}
+					<a onclick="return confirm('Are you sure you want to delete this item?')" href="/delete_personage/{{personage._id}}" class="btn btn-dark">Delete</a>
+				{% endif %}
+				<button type="submit" class="btn btn-dark">Create</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "./../index.html.twig" %}
+
+
+{% block main %}
+
+	<div class="slide-container">
+
+		{% for personage in user.array_personages %}
+			{% include personage.template %}
+
+
+			<!-- end container -->
+		{% endfor %}
+	</div>
+{% endblock %}

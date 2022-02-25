@@ -1,0 +1,31 @@
+{
+  "name": "projet-ssh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimEvrard/public.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimEvrard/public/issues"
+  },
+  "homepage": "https://github.com/JimEvrard/public#readme",
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.2.0",
+    "sass": "^1.49.7",
+    "twig": "^1.15.4"
+  }
+}
